@@ -10,11 +10,20 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "crypto-js": "^3.1.9-1",
+    "dayjs": "^1.8.12",
+    "lodash.uniqby": "^4.7.0",
+    "mobile-device-detect": "^0.2.3",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
+    "vue-content-loader": "^0.2.1",
+    "vue-mugen-scroll": "^0.2.5",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",
@@ -43,7 +52,54 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 1,
+          "maxEOF": 1,
+          "maxBOF": 0
+        }
+      ],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "state",
+            "$http"
+          ]
+        }
+      ],
+      "prefer-destructuring": [
+        0,
+        {
+          "object": false,
+          "array": false
+        }
+      ],
+      "prefer-arrow-callback": 1,
+      "vue/max-attributes-per-line": [
+        2,
+        {
+          "singleline": 5,
+          "multiline": {
+            "max": 1,
+            "allowFirstLine": false
+          }
+        }
+      ],
+      "max-len": [
+        2,
+        {
+          "code": 160,
+          "ignoreStrings": true,
+          "ignoreUrls": true,
+          "ignoreComments": true,
+          "ignoreTemplateLiterals": true
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -58,6 +114,22 @@
     "last 2 versions",
     "not ie <= 8"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "(git-branch-is master && npm --no-git-tag-version version minor) || (git-branch-is staging && npm --no-git-tag-version version patch) || lint-staged",
+      "post-commit": "git-branch-is master && git tag v$(npx -c 'echo \"$npm_package_version\"') && git add package.json package-lock.json"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
