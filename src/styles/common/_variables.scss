@@ -1,0 +1,288 @@
+$genpact-darkest-blue: #083361 !default;
+$genpact-color: #FF545E !default;
+// $genpact-red: rgb(248, 75, 39) !default;
+$genpact-red: #FF545E !default;
+$genpact-secondary: #00ADCF !default;
+$white: #FFF !default;
+$pale-white: #f9f9f9 !default;
+$yellow-white: #f8f7f2 !default;
+$gray-white: #fafaf4 !default;
+$links-blue: #047bf8 !default;
+$placeholder-color: #D2D2D2 !default;
+$selection-color: #C3EBE5 !default;
+$facebook-color: #5D82D2 !default;
+$twitter-color: #40BFF4 !default;
+$linkedin-color: #248CC9 !default;
+$jet-black:#000;
+$black:#333;
+$light-black:#555;
+$dark-grey:#777;
+$light-grey:#999;
+$button-radius-2px: 2px !default;
+$button-radius-4px: 4px !default;
+$button-radius-6px: 6px !default;
+$button-radius-8px: 8px !default;
+
+//colors
+$black_80: rgba(0, 0, 0, 0.8);
+$white_90: rgba(255, 255, 255, 0.95);
+
+//urls
+$genpact_full_logo_green_emblem_white: url('/img/logos/gsocial_go_logo.png');
+$genpact_full_logo_green_emblem_black: url('/img/logos/gsocial_go_dark.svg');
+
+/*-------------------
+  Serif font family
+--------------------*/
+
+%fontFamilySerif {
+	font-family: 'GuardianEgyptian', 'Roboto Slab', 'Lora', 'Bookman', 'Georgia', "Times New Roman", serif;
+	// font-family: "Droid Serif", Lora, Bookman, Georgia, "Times New Roman", serif;
+}
+
+%fontFamilySourceSansPro {
+	font-family: 'Source Sans Pro', 'Roboto Slab', 'Lora', 'Bookman', 'Georgia', "Times New Roman", serif;
+	// font-family: "Droid Serif", Lora, Bookman, Georgia, "Times New Roman", serif;
+}
+
+/*-------------------
+  Serif font family
+--------------------*/
+%fontFamilySansSerif {
+	// font-family: "Source sans pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	// font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Segoe UI', 'Arial', sans-serif;
+	// font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Segoe UI', 'Arial', sans-serif;
+	font-family: 'Calibri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*-------------------
+  font family for code
+--------------------*/
+
+%fontFamilyCode {
+	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+%letterSpacing05 {
+	letter-spacing: 0.5px;
+}
+
+%letterSpacing1 {
+	letter-spacing: 1px;
+}
+
+%letterSpacing15 {
+	letter-spacing: 1.5px;
+}
+
+%borderRadius2px {
+	border-radius: $button-radius-2px;
+}
+
+%borderRadius4px {
+	border-radius: $button-radius-4px;
+}
+
+%borderRadius6px {
+	border-radius: $button-radius-6px;
+}
+
+%borderRadius8px {
+	border-radius: $button-radius-8px;
+}
+
+%verticalAlign {
+	vertical-align: middle;
+}
+
+%vertical-align {
+	transform-style: preserve-3d;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+%horizontal-align {
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+%horizontal-vertical-align {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%textEllipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+%marginCenter {
+	display: block;
+	margin: 0 auto;
+}
+
+%textCenter {
+	text-align: center;
+}
+
+%opacity0 {
+	opacity: 0;
+}
+
+%opacity1 {
+	opacity: 1;
+}
+
+%invisible {
+	visibility: hidden;
+	opacity: 0;
+}
+
+%visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+%block {
+	display: block;
+}
+
+%inlineBlock {
+	display: inline-block;
+}
+
+%flex {
+	display: flex;
+}
+
+%flexWrap {
+	flex-wrap: wrap;
+}
+
+%flexJustifyContCenter {
+	justify-content: center;
+}
+
+%flexJustifyContAround {
+	justify-content: space-around;
+}
+
+%flexJustifyContBetween {
+	justify-content: space-between;
+}
+
+%flexAlignContCenter {
+	align-content: center;
+}
+
+%flexAlignItemsCenter {
+	align-items: center;
+}
+
+%flexDirectionColumn {
+	flex-direction: column;
+}
+
+%uppercase {
+	text-transform: uppercase;
+}
+
+%capitalize {
+	text-transform: capitalize;
+}
+
+%overFlowHidden {
+	overflow: hidden;
+}
+
+%posRelative {
+	position: relative;
+}
+
+%posAbsolute {
+	position: absolute;
+}
+
+%posFixed {
+	position: fixed;
+	backface-visibility: hidden;
+}
+
+%backFaceHidden {
+	backface-visibility: hidden;
+}
+
+%preserve3d {
+	transform-style: preserve-3d;
+}
+
+%blackColor {
+	color: $black;
+}
+
+%genpactTextColor {
+	color: $genpact-color;
+}
+
+%roundBorder {
+	border-radius: 1000px;
+}
+
+%truncateText {
+	@extend %overFlowHidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+%trasparentBg {
+	background: rgba(0, 0, 0, 0) !important;
+}
+
+%pointer {
+	cursor: pointer;
+}
+
+%fontSmoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+%fontWeight300 {
+	font-weight: 300;
+}
+
+%fontWeight400 {
+	font-weight: 400;
+}
+
+%fontWeight500 {
+	font-weight: 500;
+}
+
+%fontWeight600 {
+	font-weight: 600;
+}
+
+%animationCubic {
+	transition: all .08s cubic-bezier(.2, .3, .25, .9);
+	transition-property: opacity, transform, visibility;
+}
+
+%animationSmooth {
+	transition: all 0.3s;
+	transition-property: opacity, transform, visibility;
+}
+
+%animationBezier {
+	transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+	transition-property: opacity, transform, visibility;
+	// transition-duration: 1s;
+}
+
+%animationNatural {
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: opacity, transform, visibility;
+	// transition-duration: 1s;
+}
